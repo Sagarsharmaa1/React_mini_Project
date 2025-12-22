@@ -25,6 +25,10 @@ function App() {
     setConvertedAmount(amount * currencyInfo[to])
   }
 
+   if (options.length === 0) {
+    return <p>Loading currencies...</p>;
+  }
+
   return (
     <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
