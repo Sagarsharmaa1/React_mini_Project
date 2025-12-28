@@ -11,7 +11,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --bg-light:#ffffff;
+  --text-light:#000000;
+
+  --bg-dark:#0f172a;
+  --text-dark:#e5e7eb;
 }
+
+
 
 a {
   font-weight: 500;
@@ -65,4 +73,34 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+.app{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  transition:0.3s ease;
+}
+
+
+.app.light{
+  background:var(--bg-light);
+  color:var(--text-light);
+}
+
+
+.app.dark{
+  background:var(--bg-dark);
+  color:var(--text-dark);
+}
+
+button{
+  padding:10px 16px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
 }
